@@ -1,17 +1,70 @@
-﻿namespace ExchangeHometask
+﻿using System.Security.Authentication;
+
+namespace ExchangeHometask
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             double[] exchange = { 18.94, 0.59, 0.54 };
-            string[] exchanegTypes = { "TL", "USD", "EUR" };
+            string[] exchangeTypes = { "TL", "USD", "EUR" };
 
             while (true)
             {
                 Console.WriteLine("Meblegi Daxil edin");
+                double input = 0;
+                
+                while (true)
+                {
+                    input=double.Parse(Console.ReadLine());
 
+                    if (input > 0)
+                    {
+                        break;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Meblegi duzgun daxil edin");
+                    }
+
+                }
+                    Console.WriteLine("Valyuta secin");
+
+                    int index = 0;
+
+                    while (index< exchangeTypes.Length)
+                    {
+                        Console.WriteLine($"{index + 1}.{exchangeTypes[index]}");
+                        index++;
+                    }
+
+
+
+                int select = 0;
+                while (true)
+                {
+                    select = Convert.ToInt32(Console.ReadLine());
+                    if (select > 0 && select < exchangeTypes.Length)
+                    {
+                        break;
+
+                    }
+                    else
+                    {
+
+                        Console.WriteLine("Dzugun secim edin");
+
+                    }
+
+                }
+            
+            
+            
+            
+            
             }
+
 
 
 
