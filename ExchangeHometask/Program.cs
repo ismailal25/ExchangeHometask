@@ -46,7 +46,7 @@ namespace ExchangeHometask
                 while (true)
                 {
                     select = Convert.ToInt32(Console.ReadLine());
-                    if (select > 0 && select < exchangeTypes.Length)
+                    if (select > 0 && select <= exchangeTypes.Length)
                     {
                         break;
 
