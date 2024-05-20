@@ -28,9 +28,10 @@ namespace ExchangeHometask
                         Console.WriteLine("Meblegi duzgun daxil edin");
                     }
 
-                }
+                
                     Console.WriteLine("Valyuta secin");
 
+                }
                     int index = 0;
 
                     while (index< exchangeTypes.Length)
@@ -53,16 +54,45 @@ namespace ExchangeHometask
                     else
                     {
 
-                        Console.WriteLine("Dzugun secim edin");
+                        Console.WriteLine("Duzgun secim edin");
 
                     }
 
                 }
-            
-            
-            
-            
-            
+
+                double sum = 0;
+
+                sum = input * exchange[select - 1];
+
+                Console.WriteLine($"Valyuta cevirilmesi : {sum} {exchangeTypes[select - 1]}");
+
+                Console.WriteLine(" Yeni valyuta daxil etmek istiyersiz ?  devam etme halinda Y/Yes veya eks halda Exit daxil edin");
+
+                while (true)
+                {
+                    string userWrite = Console.ReadLine();
+                    if (userWrite == "Exit") 
+                    {
+
+                        return;
+                    
+                    
+                    }
+                    else if (userWrite != "Yes" && userWrite != "Y")
+                    {
+                        Console.WriteLine("Duzgun daxil edin");
+
+                    }
+                    else
+                    {
+                        break;
+
+                    }
+
+                }
+
+
+
             }
 
 
